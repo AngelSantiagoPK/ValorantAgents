@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Agent } from 'src/models/agent';
+import { AGENTS } from '../models/agents';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Game';
+  title = 'vAlorant Agents';
+  agents: Agent[] = AGENTS;
+
+  ngOnInIt() {
+  }
 }
+
+
+
