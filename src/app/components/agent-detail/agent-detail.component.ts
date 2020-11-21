@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Agent } from '../../../models/agent';
+import { Agent } from '../../../models';
 import { AgentsService } from '../../agents.service';
 import { tap } from 'rxjs/operators';
 

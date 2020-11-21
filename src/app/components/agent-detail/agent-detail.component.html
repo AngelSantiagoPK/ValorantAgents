@@ -3,7 +3,7 @@
     {{ agent.name }}
   </div>
   <div class="item photo">
-    <img src="{{ agent.characterIcon }}" />
+    <img [src]="agent.characterIcon" />
   </div>
   <div class="item ability" *ngFor="let abil of agent.abilities">
     <span class="abilityName">

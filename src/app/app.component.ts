@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AGENTS } from '../models/agents';
+import { Agent, AGENTS } from '../models';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { AGENTS } from '../models/agents';
 })
 export class AppComponent implements OnInit {
   title = 'vAlorant Agents';
-  agents = AGENTS;
+  agents: Agent[] = AGENTS;
 
   ngOnInit() {}
 }

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Agent } from '../models/agent';
-import { AGENTS } from 'src/models/agents';
+import { AGENTS, Agent } from 'src/models';
 
 @Injectable({
   providedIn: 'root',

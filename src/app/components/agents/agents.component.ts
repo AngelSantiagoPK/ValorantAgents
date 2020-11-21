@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AgentsService } from '../../agents.service';
-import { Agent } from '../../../models/agent';
+import { Agent } from '../../../models';
 
 @Component({
   selector: 'app-agents',
