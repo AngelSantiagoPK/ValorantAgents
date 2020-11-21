@@ -1,20 +1,21 @@
-<div class='body'>
-    <h3> Agents </h3>
-    <ul>
-      <li *ngFor="let agent of agents" class="container">
-        <div class="badge">
-          {{ agent.name }}
-          <span class='role'>
-            {{ agent.role.name }}
-          </span>
-          <img class="characterIcon" src="{{ agent.characterIcon }}">
-        </div>
-        <hr>
-        <div *ngFor="let ability of agent.abilities" class="ability">
-          <span class='abilityName'>{{ ability.name }} ({{ ability.keyPress }}) :</span>
-          {{ ability.description }}
-        </div>
-        
-      </li>
-    </ul>
-  </div>
+<div class="body">
+  <h3>Agents</h3>
+  <ul>
+    <li *ngFor="let agent of agents" class="container">
+      <div class="badge">
+        {{ agent.name }}
+        <span class="role">
+          {{ agent.role.name }}
+        </span>
+        <img class="characterIcon" src="{{ agent.characterIcon }}" />
+      </div>
+      <hr />
+      <div *ngFor="let ability of agent.abilities" class="ability">
+        <span class="abilityName"
+          >{{ ability.name }} ({{ ability.keyPress }}) :</span
+        >
+        {{ ability.description }}
+      </div>
+    </li>
+  </ul>
+</div>

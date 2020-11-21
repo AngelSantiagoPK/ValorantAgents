@@ -6,24 +6,19 @@ import { AgentsService } from './agents.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'vAlorant Agents';
   agents = AGENTS;
   selectedAgent: Agent;
 
-  constructor(private agentService: AgentsService) {
-  }
+  constructor(private agentService: AgentsService) {}
 
-  ngOnInIt() {
-  }
+  ngOnInIt() {}
 
-  selectAgent(agent: Agent){
+  selectAgent(agent: Agent) {
     this.selectedAgent = agent;
     this.agentService.selectAgent(this.selectedAgent);
   }
 }
-
-
-
