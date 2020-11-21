@@ -15,11 +15,6 @@ export class AgentsService {
     return AGENTS;
   }
 
-  selectAgent(agent: Agent) {
-    this.selectedAgent = agent;
-    console.log('Agent Selected: ' + this.selectedAgent.name);
-  }
-
   getSelectedAgent(): Agent {
     return this.selectedAgent;
   }

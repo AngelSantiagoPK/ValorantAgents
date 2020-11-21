@@ -4,7 +4,6 @@
     <button
       class="agentButton"
       *ngFor="let agent of agents"
-      (click)="selectAgent(agent)"
       [routerLink]="['/agent-detail', agent.name]"
       routerLinkActive="Active"
     >
