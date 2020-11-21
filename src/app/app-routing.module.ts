@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AgentDetailComponent } from './agent-detail/agent-detail.component';
-import { AgentsComponent } from './agents/agents.component';
+import { AgentPage } from './pages/agent/agent.page';
+import { AgentsPage } from './pages/agents/agents.page';
 
 const routes: Routes = [
   {
     path: 'agents',
-    component: AgentsComponent
+    component: AgentsPage,
   },
   {
     path: 'agent-detail/:agentName',
-    component: AgentDetailComponent
-  }
+    component: AgentPage,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
