@@ -1,61 +1,21 @@
-
-.body { 
-    padding: 10px 0px;
-    text-align: center;
-    & h3 {
-        justify-content: center;
-        font-size: xx-large;
-        
-    }
-}
-
-ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.container {
-    width: 30%;
-    min-width: 320px;
-    padding: 10px;
-    margin: 10px 5px;
-    list-style-type: none;
-    border: 3px solid #042e27;
-    border-radius: 7px;
+.header {
     color: white;
-    background-color: #364966;
-}
+    background-color: black;
 
-.badge {
-    font-family: 'ValorantFont';
-    font-size: xx-large;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    & .role {
-        font-size: small;
-        background-color: #fa4454;
-        border-radius: 4px;
-        margin: 0px 0px 15px 0px;
-        padding: 2px;
-    }
-}
-
-.ability {
-    padding: 10px 5px;
-    display: flex;
-    justify-content: flex-start;
-    font-family: 'Arial';
-}
-.abilityName {
-    background-color: #042e27;
+    padding: 50px;
+    margin: 10px 40px;
     border-radius: 5px;
-    padding: auto 10px;
-    margin: auto;
+
 }
 
-.characterIcon {
-    height: 280px;
-    margin: auto;
-    align-items: center;
-}
+.mat-container {
+    
+  }
+  
+  .mat-sidenav-content {
+
+  }
+  
+  .mat-sidenav {
+    width: 20%;
+  }

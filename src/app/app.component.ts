@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Agent } from 'src/models/agent';
 import { AGENTS } from '../models/agents';
+import { AgentsService } from './agents.service';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,18 @@ import { AGENTS } from '../models/agents';
 })
 export class AppComponent {
   title = 'vAlorant Agents';
-  agents: Agent[] = AGENTS;
+  agents = AGENTS;
+  selectedAgent: Agent;
+
+  constructor(private agentService: AgentsService) {
+  }
 
   ngOnInIt() {
+  }
+
+  selectAgent(agent: Agent){
+    this.selectedAgent = agent;
+    this.agentService.selectAgent(this.selectedAgent);
   }
 }
 
