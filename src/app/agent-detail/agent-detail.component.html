@@ -1,15 +1,17 @@
-<p>agent-detail works!</p>
 <div class='container'>
-    <div class="badge">
+  <div class='item header'>
     {{ agent.name }}
-    <span class='role'>
-      {{ agent.role.name }}
+  </div>
+  <div class='item photo'>
+    <img src="{{ agent.characterIcon }}">
+  </div>
+  <div class='item ability' *ngFor="let abil of agent.abilities">
+    <span class="abilityName"> 
+      {{ abil.name }}
     </span>
-    <img class="characterIcon" src="{{ agent.characterIcon }}">
+    {{ abil.description }}
   </div>
-  <hr>
-  <div *ngFor="let ability of agent.abilities" class="ability">
-    <span class='abilityName'>{{ ability.name }} ({{ ability.keyPress }}) :</span>
-    {{ ability.description }}
+  <div class='item bio'>
+    <p>item 7</p>
   </div>
-</div>
+<div>

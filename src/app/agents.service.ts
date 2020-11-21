@@ -23,4 +23,8 @@ export class AgentsService {
   getSelectedAgent(): Agent {
     return this.selectedAgent;
   }
+
+  selectAgentByName(name: string) {
+    this.selectedAgent = AGENTS.find(agent => agent.name === name);
+  }
 }

@@ -9,7 +9,7 @@ const routes: Routes = [
     component: AgentsComponent
   },
   {
-    path: 'agent-detail',
+    path: 'agent-detail/:agentName',
     component: AgentDetailComponent
   }
 ];
