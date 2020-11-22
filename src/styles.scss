@@ -1,12 +1,24 @@
+/* Utilities: Design Tokens, Functions and Mixins
+  ========================================================================== */
+@import "./assets/scss/_destyle";
+
+@import "./assets/scss/_utils";
+
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-color: #dc3d4b;
-    font-family: 'ValorantFont';
+  background-color: #dc3d4b;
+  font-family: $family-brand;
 }
 
 @font-face {
-    font-family: 'ValorantFont';
-    src: url(./assets/fonts/ValorantFont.ttf) format("opentype");
+  font-family: $family-brand;
+  src: url(./assets/fonts/ValorantFont.ttf) format("opentype");
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

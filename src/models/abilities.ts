@@ -1,10 +1,10 @@
 import { Ability } from './ability';
 
-export const PHEONIX_ABILITIES: Ability[] = [
+export const PHOENIX_ABILITIES: Ability[] = [
   {
     name: 'Hot Hands',
     description:
-      'Throw a fireball that explodes after a short delay on impact with the ground. The fire zone damages enemies, but heals Pheonix.',
+      'Throw a fireball that explodes after a short delay on impact with the ground. The fire zone damages enemies, but heals Phoenix.',
     keyPress: 'E',
     agentName: 'Phoenix',
   },
@@ -404,7 +404,7 @@ export const ABILITIES: Ability[] = [
   ...JETT_ABILITIES,
   ...KILLJOY_ABILITIES,
   ...OMEN_ABILITIES,
-  ...PHEONIX_ABILITIES,
+  ...PHOENIX_ABILITIES,
   ...RAZE_ABILITIES,
   ...REYNA_ABILITIES,
   ...SAGE_ABILITIES,

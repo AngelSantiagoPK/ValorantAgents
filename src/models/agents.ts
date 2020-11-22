@@ -40,10 +40,10 @@ export const AGENTS: Agent[] = [
     characterIcon: './assets/agent-photos/Brimstone.png',
   },
   {
-    name: 'Pheonix',
+    name: 'Phoenix',
     role: DUELIST,
-    abilities: ABILITIES.filter((ability) => ability.agentName === 'Pheonix'),
-    characterIcon: './assets/agent-photos/Pheonix.png',
+    abilities: ABILITIES.filter((ability) => ability.agentName === 'Phoenix'),
+    characterIcon: './assets/agent-photos/Phoenix.png',
   },
   {
     name: 'Raze',

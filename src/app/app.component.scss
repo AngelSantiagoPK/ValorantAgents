@@ -1,10 +1,27 @@
+@import "utils";
+
 .header {
   color: white;
   background-color: black;
 
-  padding: 50px;
-  margin: 10px 40px;
-  border-radius: 5px;
+  padding: $space-xl;
+  margin: $space-l;
+  border-radius: $radius-xl;
+}
+
+nav {
+  display: flex;
+}
+
+button {
+  color: white;
+  background-color: black;
+  padding: $space-xs;
+  border: $size-border-s solid white;
+  border-radius: $radius-s;
+  width: $space-xxl;
+  text-align: center;
+  margin: $space-xxs $space-m $space-xxs 0;
 }
 
 .mat-container {

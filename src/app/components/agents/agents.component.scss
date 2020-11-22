@@ -1,6 +1,8 @@
+@import "utils";
+
 .body {
-  padding: 10px 0px;
   text-align: center;
+  margin: 0 $space-l;
   & h3 {
     justify-content: center;
     font-size: xx-large;
@@ -10,45 +12,47 @@
 ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .container {
-  width: 30%;
+  flex: 1;
+  margin: $space-s;
   min-width: 320px;
-  padding: 10px;
-  margin: 10px 5px;
   list-style-type: none;
-  border: 3px solid #042e27;
-  border-radius: 7px;
+  border: $size-border-l solid #042e27;
+  border-radius: $radius-xl;
   color: white;
   background-color: #364966;
 }
 
 .badge {
-  font-family: "ValorantFont";
+  font-family: $family-brand;
+  padding: $space-m;
   font-size: xx-large;
   display: flex;
   flex-direction: column;
   text-align: center;
   & .role {
     font-size: small;
-    background-color: #fa4454;
-    border-radius: 4px;
-    margin: 0px 0px 15px 0px;
-    padding: 2px;
+    background-color: $red;
+    border-radius: $size-border-l;
+    margin: 0px 0px $space-m 0px;
+    padding: $space-xxs;
   }
 }
 
 .ability {
-  padding: 10px 5px;
+  padding: $space-s $space-xs;
   display: flex;
   justify-content: flex-start;
   font-family: "Arial";
 }
+
 .abilityName {
   background-color: #042e27;
-  border-radius: 5px;
-  padding: auto 10px;
+  border-radius: $radius-l;
+  padding: auto $space-s;
   margin: auto;
 }
 
