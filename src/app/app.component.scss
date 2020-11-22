@@ -1,5 +1,9 @@
 @import "utils";
 
+h1 {
+  font-family: $family-brand;
+}
+
 .header {
   color: white;
   background-color: black;
@@ -11,6 +15,7 @@
 
 nav {
   display: flex;
+  justify-content: space-between;
 }
 
 button {
