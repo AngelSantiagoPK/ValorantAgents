@@ -1,14 +1,7 @@
-<div class="body">
-  <h3>Agents</h3>
-  <ul>
-    <li *ngFor="let agent of agents" class="container">
-      <div class="badge">
-        {{ agent.name }}
-        <span class="role">
-          {{ agent.role.name }}
-        </span>
-        <img class="characterIcon" src="{{ agent.characterIcon }}" />
-      </div>
-    </li>
-  </ul>
+<div class="container">
+  <div *ngFor="let agent of agents">
+    <img [src]="agent.characterIcon"
+    class="characterIcon">
+    <span class="agentName"><p>{{ agent.name }}</p></span>
+  </div>
 </div>

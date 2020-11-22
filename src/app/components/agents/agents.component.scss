@@ -1,49 +1,23 @@
 @import "utils";
 
-.body {
-  text-align: center;
-  margin: 0 $space-l;
-  & h3 {
-    justify-content: center;
-    font-size: xx-large;
-  }
-}
-
-ul {
+.container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.container {
-  flex: 1;
-  margin: $space-s;
-  min-width: 320px;
-  list-style-type: none;
-  border: $size-border-l solid $red;
+  justify-content: space-evenly;
+  background-color: $red;
   border-radius: $radius-xl;
-  color: black;
-  background-color: whitesmoke;
-}
-
-.badge {
+  margin: 0 $space-l $space-l $space-l;
   font-family: $family-brand;
-  padding: $space-m;
-  font-size: xx-large;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  & .role {
-    font-size: small;
-    background-color: $red;
-    border-radius: $size-border-l;
-    margin: 0px 0px $space-m 0px;
-    padding: $space-xxs;
-  }
 }
 
 .characterIcon {
   height: 280px;
   margin: auto;
   align-items: center;
+  margin: $space-l;
+}
+
+.agentName {
+  text-align: center;
+  font-size: $space-l;
 }
