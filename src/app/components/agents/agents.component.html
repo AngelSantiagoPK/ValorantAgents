@@ -9,13 +9,6 @@
         </span>
         <img class="characterIcon" src="{{ agent.characterIcon }}" />
       </div>
-      <hr />
-      <div *ngFor="let ability of agent.abilities" class="ability">
-        <span class="abilityName"
-          >{{ ability.name }} ({{ ability.keyPress }}) :</span
-        >
-        {{ ability.description }}
-      </div>
     </li>
   </ul>
 </div>
