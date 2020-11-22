@@ -1,29 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Agent } from 'src/models/agent';
-import { AGENTS } from '../models/agents';
-import { AgentsService } from './agents.service';
+import { Agent, AGENTS } from '../models';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'vAlorant Agents';
-  agents = AGENTS;
-  selectedAgent: Agent;
+  agents: Agent[] = AGENTS;
 
-  constructor(private agentService: AgentsService) {
-  }
-
-  ngOnInIt() {
-  }
-
-  selectAgent(agent: Agent){
-    this.selectedAgent = agent;
-    this.agentService.selectAgent(this.selectedAgent);
-  }
+  ngOnInit() {}
 }
-
-
-

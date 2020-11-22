@@ -1,0 +1,58 @@
+@import "utils";
+
+.container {
+  display: grid;
+  grid-gap: $space-s;
+  grid-template-columns: auto auto auto;
+  margin: $space-l;
+}
+
+.item {
+  background-color: lightgray;
+  border: $size-border-l solid black;
+  border-radius: $radius-xl;
+  text-align: center;
+}
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  height: 100px;
+  font-family: $family-brand;
+  font-size: 40px;
+  padding: $space-xl 0px 0px 0px;
+}
+
+.photo {
+  border: none;
+  background-color: $red;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  & img {
+    height: 500px;
+    padding: $space-l;
+  }
+}
+
+.ability {
+  background-color: #bbbbbb;
+  padding: $space-s $space-m;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+
+  .abilityName {
+    border: 1px solid $red;
+    background-color: $red;
+    border-radius: $radius-m;
+  }
+}
+
+.bio {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  height: 100px;
+}

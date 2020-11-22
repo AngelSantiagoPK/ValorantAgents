@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="item header">
+    {{ agent.name }}
+  </div>
+  <div class="item photo">
+    <img [src]="agent.characterIcon" />
+  </div>
+  <div class="item ability" *ngFor="let abil of agent.abilities">
+    <span class="abilityName">
+      {{ abil.name }}
+    </span>
+    {{ abil.description }}
+  </div>
+  <div class="item bio">
+    <p>item 7</p>
+  </div>
+  <div></div>
+</div>

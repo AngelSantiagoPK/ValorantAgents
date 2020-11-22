@@ -1,9 +1,14 @@
-<div class='header'>
+<div class="header">
   <h1>Valorant Buster</h1>
   <nav>
-    <button class="agentButton" *ngFor="let agent of agents"
-    (click)="selectAgent(agent)" [routerLink]="['/agent-detail', agent.name]"
-    routerLinkActive='Active'>{{ agent.name }}</button>
+    <button
+      class="agentButton"
+      *ngFor="let agent of agents"
+      [routerLink]="['/agent-detail', agent.name]"
+      routerLinkActive="Active"
+    >
+      {{ agent.name }}
+    </button>
   </nav>
 </div>
 

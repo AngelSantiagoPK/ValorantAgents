@@ -1,0 +1,63 @@
+@import "utils";
+
+.body {
+  text-align: center;
+  margin: 0 $space-l;
+  & h3 {
+    justify-content: center;
+    font-size: xx-large;
+  }
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container {
+  flex: 1;
+  margin: $space-s;
+  min-width: 320px;
+  list-style-type: none;
+  border: $size-border-l solid #042e27;
+  border-radius: $radius-xl;
+  color: white;
+  background-color: #364966;
+}
+
+.badge {
+  font-family: $family-brand;
+  padding: $space-m;
+  font-size: xx-large;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  & .role {
+    font-size: small;
+    background-color: $red;
+    border-radius: $size-border-l;
+    margin: 0px 0px $space-m 0px;
+    padding: $space-xxs;
+  }
+}
+
+.ability {
+  padding: $space-s $space-xs;
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Arial";
+}
+
+.abilityName {
+  background-color: #042e27;
+  border-radius: $radius-l;
+  padding: auto $space-s;
+  margin: auto;
+}
+
+.characterIcon {
+  height: 280px;
+  margin: auto;
+  align-items: center;
+}
