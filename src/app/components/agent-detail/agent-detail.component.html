@@ -1,6 +1,8 @@
 <div class="container">
   <div class="item header">
-    {{ agent.name }}
+    <p class="id">#{{ agent.id }}</p>
+    <p class="name">{{ agent.name }}</p>
+    <p class="role"> {{ agent.role.name }} </p>
   </div>
   <div class="item photo">
     <img [src]="agent.characterIcon" />
