@@ -59,9 +59,10 @@ $text-m: 1.2rem;
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 4;
-  height: 100px;
+  height: auto;
 
   text-align: left;
-  padding: $space-l;
+  padding: $space-l $space-xl;
   font-size: $text-m;
+  line-height: $space-l;
 }
