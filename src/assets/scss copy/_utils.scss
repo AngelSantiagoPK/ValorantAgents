@@ -1,0 +1,11 @@
+/* Functions (for automating styles, and assisting with units)
+   SCSS can be quite programatic, and helpful for design
+   ========================================================================== */
+@import 'functions';
+
+@import './core/_index';
+
+/* Design Themes
+   Application specific SCSS Variables and Mixins
+   ========================================================================== */
+@import './themes/gibson-material';
