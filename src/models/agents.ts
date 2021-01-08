@@ -1,6 +1,6 @@
 import { Agent } from './agent';
 import { CONTROLLER, DUELIST, INITIATOR, SENTINEL } from './roles';
-import { ABILITIES } from './abilities';
+import { ABILITIES, YORU_ABILITIES } from './abilities';
 import { BIOS } from './bios';
 
 export const AGENTS: Agent[] = [
@@ -108,4 +108,12 @@ export const AGENTS: Agent[] = [
     characterIcon: './assets/agent-photos/Skye.png',
     bio: BIOS[0]
   },
+  {
+    id: 15,
+    name: 'Yoru',
+    role: DUELIST,
+    abilities: YORU_ABILITIES,
+    characterIcon: './assets/agent-photos/YoruPreview.png',
+    bio: BIOS[0]
+  }
 ];

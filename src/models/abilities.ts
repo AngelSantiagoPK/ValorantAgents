@@ -397,6 +397,33 @@ export const KILLJOY_ABILITIES: Ability[] = [
   },
 ];
 
+export const YORU_ABILITIES: Ability[] = [
+  {
+    name: 'Uninvited Guest',
+    description: 'Create a binding portal to return to on command, or send one out to a new location and teleport there.',
+    keyPress: 'E',
+    agentName: 'Yoru',
+  },
+  {
+    name: 'Bait',
+    description: 'Send a trail of simulated footsteps to distract your enemies. Can be set at a specific location and triggered at a distance.',
+    keyPress: 'C',
+    agentName: 'Yoru',
+  },
+  {
+    name: 'Stun',
+    description: 'Throw an unstable ball of reality that explodes into a blinding flash after bouncing off of a surface.',
+    keyPress: 'Q',
+    agentName: 'Yoru',
+  },
+  {
+    name: 'Spacial Drift',
+    description: 'Equip a mask that allows Yoru to see to other dimesions while being invisible and invulnurable to anyone else.',
+    keyPress: 'X',
+    agentName: 'Yoru',
+  }
+];
+
 export const ABILITIES: Ability[] = [
   ...BREACH_ABILITIES,
   ...BRIMSTONE_ABILITIES,
@@ -411,4 +438,5 @@ export const ABILITIES: Ability[] = [
   ...SKYE_ABILITIES,
   ...SOVA_ABILITIES,
   ...VIPER_ABILITIES,
+  ...YORU_ABILITIES
 ];
