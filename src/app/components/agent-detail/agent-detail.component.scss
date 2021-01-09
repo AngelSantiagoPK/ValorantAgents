@@ -1,6 +1,7 @@
 @import "utils";
 $text-m: 1.2rem;
 
+// Desktop devices
 .container {
   display: grid;
   grid-gap: $space-s;
@@ -66,4 +67,25 @@ $text-m: 1.2rem;
   padding: $space-l $space-xl;
   font-size: $text-m;
   line-height: $space-l;
+}
+
+// Mobile devices
+@media only screen and (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .ability {
+    height: 20vh;
+    font-size: 1rem;
+  }
+  .abilityName {
+    max-height: 1vh;
+  }
 }
