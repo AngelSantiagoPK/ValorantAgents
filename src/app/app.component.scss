@@ -33,12 +33,18 @@ button {
   margin: $space-xxs $space-m $space-xxs 0;
 }
 
-.mat-container {
-}
+@media only screen and (max-width: 570px) {
+  button {
+    display: none;
+  }
 
-.mat-sidenav-content {
-}
-
-.mat-sidenav {
-  width: 20%;
+  .header {
+    display: flex;
+    padding: 10px;
+    margin: 0;
+    border-radius: 0;
+    height: 40px;
+    justify-content: center;
+    align-content: center;
+  }
 }
