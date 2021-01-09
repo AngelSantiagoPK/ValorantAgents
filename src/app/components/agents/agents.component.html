@@ -1,5 +1,6 @@
 <div class="container">
-  <div *ngFor="let agent of agents" routerLink="['/agent-detail', agent.name]"
+  <div *ngFor="let agent of agents" 
+  [routerLink]="['/agent-detail', agent.name]"
   routerLinkActive='Active'>
     <img [src]="agent.characterIcon"
     class="characterIcon">
