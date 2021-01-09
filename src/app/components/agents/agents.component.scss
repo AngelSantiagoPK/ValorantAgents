@@ -21,3 +21,17 @@
   text-align: center;
   font-size: $space-l;
 }
+
+@media only screen and (max-width: 570px) {
+  .container {
+    margin: $space-s $space-s;
+  }
+
+  .characterIcon {
+    height: 100px;
+  }
+
+  .agentName {
+    font-size: $space-m;
+  }
+}
