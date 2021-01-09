@@ -4,6 +4,10 @@ h1 {
   font-family: $family-brand;
 }
 
+h1:focus {
+  outline: none;
+}
+
 .header {
   color: white;
   background-color: black;
@@ -15,7 +19,7 @@ h1 {
 
 nav {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 button {
