@@ -1,6 +1,7 @@
 import { Ability } from './ability';
+import { Bio } from './bio';
 import { Role } from './role';
-import { Bio } from './bio'
+import { Video } from './video';
 
 export interface Agent {
   id: number;
@@ -9,4 +10,5 @@ export interface Agent {
   abilities: Ability[];
   characterIcon: string;
   bio: Bio;
+  videos?: Video[];
 }
