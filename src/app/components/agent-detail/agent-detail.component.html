@@ -2,7 +2,7 @@
   <div class="item header">
     <p class="id">#{{ agent.id }}</p>
     <p class="name">{{ agent.name }}</p>
-    <p class="role"> {{ agent.role.name }} </p>
+    <p class="role">{{ agent.role.name }}</p>
   </div>
   <div class="item photo">
     <img [src]="agent.characterIcon" />
@@ -14,7 +14,20 @@
     {{ abil.description }}
   </div>
   <div class="item bio">
-    <p> {{ agent.bio?.bio }} </p>
+    <p>{{ agent.bio?.bio }}</p>
   </div>
-  <div></div>
+  <div class="item">
+    <youtube-player
+      *ngFor="let clip of agent.videos"
+      [videoId]="clip.videoId"
+      suggestedQuality="highres"
+      class="player"
+      [height]="600"
+      [width]="1080"
+      [startSeconds]="clip?.start"
+      [endSeconds]="clip?.end"
+    >
+      <p>{{ clip.name }}</p>
+    </youtube-player>
+  </div>
 </div>
