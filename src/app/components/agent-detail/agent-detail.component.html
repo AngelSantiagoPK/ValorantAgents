@@ -16,7 +16,7 @@
   <div class="item bio">
     <p>{{ agent.bio?.bio }}</p>
   </div>
-  <div class="item">
+  <div class="item video">
     <youtube-player
       *ngFor="let clip of agent.videos"
       [videoId]="clip.videoId"
