@@ -1,0 +1,45 @@
+@import "utils";
+
+.navbar {
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  border-top: 3px solid $red;
+  height: $space-xl;
+  font-family: $family-brand;
+
+  &__title {
+    margin: auto $space-m;
+    font-family: $family-brand;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    margin: auto $space-s;
+    padding: $space-s;
+    border-left: 2px solid $red;
+
+    &__item {
+      padding: $space-xs $space-m;
+    }
+  }
+
+  &__label {
+    color: black;
+    font-family: $family-brand;
+    padding: $space-xs;
+  }
+
+  &__select {
+    background-color: white;
+    max-width: 200px;
+    height: $space-l;
+    margin: auto $space-xl auto auto;
+
+    &__option {
+      font-family: $family-brand;
+    }
+  }
+}

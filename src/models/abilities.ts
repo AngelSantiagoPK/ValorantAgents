@@ -399,29 +399,60 @@ export const KILLJOY_ABILITIES: Ability[] = [
 
 export const YORU_ABILITIES: Ability[] = [
   {
-    name: 'Uninvited Guest',
-    description: 'Create a binding portal to return to on command, or send one out to a new location and teleport there.',
+    name: 'Gatecrash',
+    description:
+      'Create a binding portal to return to on command, or send one out to a new location and teleport there.',
     keyPress: 'E',
     agentName: 'Yoru',
   },
   {
-    name: 'Bait',
-    description: 'Send a trail of simulated footsteps to distract your enemies. Can be set at a specific location and triggered at a distance.',
+    name: 'Fakeout',
+    description:
+      'Send a trail of simulated footsteps to distract your enemies. Can be set at a specific location and triggered at a distance.',
     keyPress: 'C',
     agentName: 'Yoru',
   },
   {
-    name: 'Stun',
-    description: 'Throw an unstable ball of reality that explodes into a blinding flash after bouncing off of a surface.',
+    name: 'Blindside',
+    description:
+      'Throw an unstable ball of reality that explodes into a blinding flash after bouncing off of a surface.',
     keyPress: 'Q',
     agentName: 'Yoru',
   },
   {
-    name: 'Spacial Drift',
-    description: 'Equip a mask that allows Yoru to see to other dimesions while being invisible and invulnurable to anyone else.',
+    name: 'Dimentional Drift',
+    description:
+      'Equip a mask that allows Yoru to see to other dimesions while being invisible and invulnurable to anyone else.',
     keyPress: 'X',
     agentName: 'Yoru',
-  }
+  },
+];
+
+export const ASTRA_ABILITIES: Ability[] = [
+  {
+    name: 'Nebula',
+    description: '',
+    keyPress: 'E',
+    agentName: 'Astra',
+  },
+  {
+    name: 'Gravity Well',
+    description: '',
+    keyPress: 'C',
+    agentName: 'Astra',
+  },
+  {
+    name: 'Nova Pulse',
+    description: '',
+    keyPress: 'Q',
+    agentName: 'Astra',
+  },
+  {
+    name: 'Astral Form/Cosmic Divide',
+    description: '',
+    keyPress: 'X',
+    agentName: 'Astra',
+  },
 ];
 
 export const ABILITIES: Ability[] = [
@@ -438,5 +469,6 @@ export const ABILITIES: Ability[] = [
   ...SKYE_ABILITIES,
   ...SOVA_ABILITIES,
   ...VIPER_ABILITIES,
-  ...YORU_ABILITIES
+  ...YORU_ABILITIES,
+  ...ASTRA_ABILITIES,
 ];

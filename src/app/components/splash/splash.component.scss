@@ -1,0 +1,44 @@
+@import "utils";
+
+.page {
+  margin: $space-s auto;
+  padding: $space-m;
+  width: 70%;
+  color: white;
+
+  &__title {
+    font-size: 3rem;
+    font-family: $family-brand;
+    text-align: center;
+    background-color: black;
+    padding: $space-m;
+  }
+
+  &__content {
+    margin: 0 auto;
+    padding: $space-m $space-xl;
+    background: black;
+  }
+
+  &__content h2 {
+    text-align: center;
+    font-family: $family-brand;
+  }
+
+  &__content p {
+    line-height: 2;
+    font-size: 1.1rem;
+  }
+
+  &__content p a {
+    line-height: 2;
+    font-size: 1.1rem;
+    padding: $space-xxs $space-s;
+    background: lightseagreen;
+
+    &:hover {
+      background: $red;
+      color: black;
+    }
+  }
+}

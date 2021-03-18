@@ -1,33 +1,31 @@
-<div class="container">
-  <div class="item header">
-    <p class="id">#{{ agent.id }}</p>
-    <p class="name">{{ agent.name }}</p>
-    <p class="role">{{ agent.role.name }}</p>
+<div class="agent">
+  <div class="agent__header">
+    <div class="agent__header__info">{{ agent.name }}</div>
+    <div class="agent__header__info">{{ agent.role.name }}</div>
+    <div class="agent__header__info">{{ agent.id }}</div>
   </div>
-  <div class="item photo">
-    <img [src]="agent.characterIcon" />
+  <div class="agent__image">
+    <img src="{{ agent.characterIcon }}" alt="" srcset="" />
   </div>
-  <div class="item ability" *ngFor="let abil of agent.abilities">
-    <span class="abilityName">
-      {{ abil.name }}
-    </span>
-    {{ abil.description }}
-  </div>
-  <div class="item bio">
-    <p>{{ agent.bio?.bio }}</p>
-  </div>
-  <div class="item video">
-    <youtube-player
-      *ngFor="let clip of agent.videos"
-      [videoId]="clip.videoId"
-      suggestedQuality="highres"
-      class="player"
-      [height]="600"
-      [width]="1080"
-      [startSeconds]="clip?.start"
-      [endSeconds]="clip?.end"
-    >
-      <p>{{ clip.name }}</p>
-    </youtube-player>
+  <div class="agent__info">
+    <div class="agent__info__role">
+      // ROLE - {{ agent.role.name }} <br />
+      {{ agent.role.description }}
+    </div>
+    <div class="agent__info__bio">
+      // BIO -
+      {{ agent.bio.bio }}
+    </div>
+    <div class="agent__info__abilities">
+      // ABILITIES
+      <mat-tab-group [backgroundColor]="background">
+        <mat-tab
+          *ngFor="let ability of agent.abilities"
+          label=" {{ ability.name }} [{{ ability.keyPress }}] "
+        >
+          {{ ability.description }}
+        </mat-tab>
+      </mat-tab-group>
+    </div>
   </div>
 </div>

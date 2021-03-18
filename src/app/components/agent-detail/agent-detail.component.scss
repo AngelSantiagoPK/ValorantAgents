@@ -1,100 +1,67 @@
 @import "utils";
-$text-m: 1.2rem;
 
-// Desktop devices
-.container {
+.agent {
+  height: 90vh;
   display: grid;
-  grid-gap: $space-s;
-  grid-template-columns: auto auto auto;
-  margin: $space-l;
-}
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr;
+  margin: $space-s $space-l;
+  row-gap: 10px;
+  column-gap: 10px;
+  background: #4a4a50;
+  border-radius: $radius-l;
 
-.item {
-  background-color: lightgray;
-  //border: $size-border-l solid black;
-  border-radius: $radius-xl;
-  text-align: center;
-  box-shadow: 0px 2px 5px black;
-  & .video {
-    justify-content: center;
-  }
-}
+  &__header {
+    grid-column: 1/3;
+    grid-row: 1/2;
 
-.header {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  height: 100px;
-  font-family: $family-brand;
-  font-size: 40px;
-  padding: $space-l 0 $space-l 0;
-
-  display: flex;
-  justify-content: space-around;
-}
-
-.photo {
-  border: none;
-  background-color: $red;
-  grid-column-start: 1;
-  grid-row-start: 2;
-  grid-row-end: 4;
-  & img {
-    height: 500px;
+    color: white;
+    background: black;
+    border-top-left-radius: $radius-l;
+    border-top-right-radius: $radius-l;
+    width: 100%;
+    font-size: 3rem;
+    font-family: $family-brand;
     padding: $space-l;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
-}
 
-.ability {
-  background-color: #bbbbbb;
-  padding: $space-s $space-m;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  font-size: $text-m;
-
-  .abilityName {
-    border: 1px solid $red;
-    background-color: $red;
-    border-radius: $radius-m;
-    padding: $space-l $space-xl;
+  &__image img {
+    margin-left: $space-xl;
+    height: 85vh;
+    grid-column: 1/2;
+    grid-row: 2/4;
   }
-}
 
-.bio {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 4;
-  height: auto;
-
-  text-align: left;
-  padding: $space-l $space-xl;
-  font-size: $text-m;
-  line-height: $space-l;
-}
-
-// Mobile devices
-@media only screen and (max-width: 800px) {
-  .container {
+  &__info {
     display: flex;
     flex-direction: column;
-  }
+    grid-column: 2/3;
+    grid-row: 2/4;
+    color: white;
 
-  .header {
-    flex-direction: column;
-    height: auto;
-    margin: 0;
-  }
+    &__role {
+      padding: $space-l $space-xl 0;
+      margin-bottom: 10px;
+      line-height: 2;
+      font-size: 1.2rem;
+    }
 
-  .ability {
-    height: 20vh;
-    font-size: 1rem;
-  }
-  .abilityName {
-    max-height: 1vh;
-  }
-}
+    &__bio {
+      padding: $space-l $space-xl;
+      margin-bottom: 10px;
+      line-height: 2;
+      font-size: 1.2rem;
+    }
 
-.player {
-  height: 30vh;
-  width: 60vw;
+    &__abilities {
+      padding: $space-s $space-xl;
+      margin-bottom: 10px;
+      line-height: 2;
+      font-size: 1.2rem;
+    }
+  }
 }

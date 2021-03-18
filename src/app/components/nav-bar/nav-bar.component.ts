@@ -3,11 +3,11 @@ import { Agent } from '../../../models';
 import { AgentsService } from '../../agents.service';
 
 @Component({
-  selector: 'app-agents',
-  templateUrl: './agents.component.html',
-  styleUrls: ['./agents.component.scss'],
+  selector: 'app-nav-bar',
+  templateUrl: './nav-bar.component.html',
+  styleUrls: ['./nav-bar.component.scss'],
 })
-export class AgentsComponent implements OnInit {
+export class NavBarComponent implements OnInit {
   agents: Agent[];
   constructor(private agentsService: AgentsService) {}
 

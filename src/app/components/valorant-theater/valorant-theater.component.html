@@ -1,15 +1,19 @@
-<div class="container">
-  <h3>Valorant Theater</h3>
-  <youtube-player
-    videoId="e_E9W2vsRbQ"
-    suggestedQuality="highres"
-    [height]="600"
-    [width]="1080"
-  >
-  </youtube-player>
+<div class="page">
+  <div class="page__sidebar">
+    <ul class="page__sidebar__movies">
+      <li
+        class="page__sidebar__movie"
+        *ngFor="let movie of movies"
+        value=" {{ movie.videoId }} "
+        (click)="onClick(movie)"
+      >
+        {{ movie.name }}
+      </li>
+    </ul>
+  </div>
 
   <youtube-player
-    videoId="hhlgphVf-1g"
+    videoId="123"
     suggestedQuality="highres"
     [height]="600"
     [width]="1080"
