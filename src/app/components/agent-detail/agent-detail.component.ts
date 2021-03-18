@@ -1,8 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ThemePalette } from '@angular/material/core';
 import { ActivatedRoute } from '@angular/router';
+import { tap } from 'rxjs/operators';
 import { Agent } from '../../../models';
 import { AgentsService } from '../../agents.service';
-import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-agent-detail',
@@ -11,6 +12,7 @@ import { tap } from 'rxjs/operators';
 })
 export class AgentDetailComponent implements OnInit {
   agent: Agent;
+  background: ThemePalette = 'warn';
 
   constructor(
     private agentsService: AgentsService,

@@ -1,9 +1,14 @@
-<div class="container">
-  <div *ngFor="let agent of agents" 
-  [routerLink]="['/agent-detail', agent.name]"
-  routerLinkActive='Active'>
-    <img [src]="agent.characterIcon"
-    class="characterIcon">
-    <span class="agentName"><p>{{ agent.name }}</p></span>
+<div class="page">
+  <div
+    class="page__agent"
+    *ngFor="let agent of agents"
+    [routerLink]="['../agent-detail/', agent.name]"
+  >
+    <img
+      src="{{ agent.characterIcon }}"
+      alt="{{ agent.name }}"
+      class="page__agent__characterIcon"
+    />
+    <div class="page__agent__name">{{ agent.name }}</div>
   </div>
 </div>

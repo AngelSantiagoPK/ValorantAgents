@@ -1,9 +1,36 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@import "utils";
+
+.page {
+  position: relative;
+
+  &__sidebar {
+    height: 100%;
+    width: 280px;
+    position: fixed;
+    z-index: 0;
+    top: $space-xl;
+    left: 0;
+    background-color: #111;
+    color: white;
+    overflow-x: hidden;
+    padding-top: 20px;
+
+    &__movies {
+      padding: $space-m;
+    }
+
+    &__movie {
+      margin-bottom: $space-m;
+      font-family: $family-brand;
+      border-bottom: 2px solid $red;
+    }
+  }
 }
 
 youtube-player {
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  margin: $space-xs auto;
   padding: 25px;
 }

@@ -1,6 +1,6 @@
 @import "utils";
 
-.container {
+.page {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -8,6 +8,25 @@
   border-radius: $radius-xl;
   margin: 0 $space-l $space-l $space-l;
   font-family: $family-brand;
+
+  &__agent {
+    position: relative;
+
+    &__characterIcon {
+      height: 280px;
+      align-items: center;
+      margin: $space-l;
+    }
+
+    &__name {
+      font-family: $family-brand;
+      color: white;
+      position: absolute;
+      top: 80%;
+      left: 10%;
+      font-size: 2.2rem;
+    }
+  }
 }
 
 .characterIcon {

@@ -1,16 +1,2 @@
-<div class="header">
-  <h1 routerLink="agents"
-  routerLinkActive="Active">Valorant Agents</h1>
-  <nav>
-    <button
-      class="agentButton"
-      *ngFor="let agent of agents"
-      [routerLink]="['/agent-detail', agent.name]"
-      routerLinkActive="Active"
-    >
-      {{ agent.name }}
-    </button>
-  </nav>
-</div>
-
+<app-nav-bar></app-nav-bar>
 <router-outlet></router-outlet>
