@@ -10,7 +10,10 @@ import { VIDEOS } from '../../../models/videos';
 export class ValorantTheaterComponent implements OnInit {
   //variables
   movies = VIDEOS;
-  selectedMovie: Video;
+
+  selectedMovie: Video = {
+    videoId: 'e_E9W2vsRbQ',
+  };
 
   constructor() {}
 
@@ -22,6 +25,5 @@ export class ValorantTheaterComponent implements OnInit {
 
   onClick(event) {
     this.selectedMovie = event;
-    console.log(event);
   }
 }

@@ -431,25 +431,28 @@ export const YORU_ABILITIES: Ability[] = [
 export const ASTRA_ABILITIES: Ability[] = [
   {
     name: 'Nebula',
-    description: '',
+    description:
+      'Place stars in Astral Form and create a Nebula smoke when triggered.',
     keyPress: 'E',
     agentName: 'Astra',
   },
   {
     name: 'Gravity Well',
-    description: '',
+    description:
+      'Place stars in Astral Form and suck enemies toward the middle when triggered before exploding.',
     keyPress: 'C',
     agentName: 'Astra',
   },
   {
     name: 'Nova Pulse',
-    description: '',
+    description: 'Place stars in Astral Form and stun enemies when triggered.',
     keyPress: 'Q',
     agentName: 'Astra',
   },
   {
     name: 'Astral Form/Cosmic Divide',
-    description: '',
+    description:
+      "Astral Form let's you place stars anywhere on the map to be used later. Cosmic Divide creates a giant Cosmic wall that blocks bullets and vision, and dampens audio.",
     keyPress: 'X',
     agentName: 'Astra',
   },

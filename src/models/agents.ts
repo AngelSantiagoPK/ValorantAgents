@@ -1,4 +1,4 @@
-import { ABILITIES, ASTRA_ABILITIES, YORU_ABILITIES } from './abilities';
+import { ABILITIES } from './abilities';
 import { Agent } from './agent';
 import { BIOS } from './bios';
 import { CONTROLLER, DUELIST, INITIATOR, SENTINEL } from './roles';
@@ -114,7 +114,7 @@ export const AGENTS: Agent[] = [
     id: 14,
     name: 'Yoru',
     role: DUELIST,
-    abilities: YORU_ABILITIES,
+    abilities: ABILITIES.filter((ability) => ability.agentName === 'Yoru'),
     characterIcon: './assets/agent-photos/Yoru.png',
     bio: BIOS[14],
   },
@@ -122,7 +122,7 @@ export const AGENTS: Agent[] = [
     id: 15,
     name: 'Astra',
     role: CONTROLLER,
-    abilities: ASTRA_ABILITIES,
+    abilities: ABILITIES.filter((ability) => ability.agentName === 'Astra'),
     characterIcon: './assets/agent-photos/Astra.png',
     bio: BIOS[15],
   },
