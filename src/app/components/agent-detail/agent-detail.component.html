@@ -1,11 +1,11 @@
 <div class="agent">
   <div class="agent__header">
-    <div class="agent__header__info">{{ agent.name }}</div>
-    <div class="agent__header__info">{{ agent.role.name }}</div>
-    <div class="agent__header__info">{{ agent.id }}</div>
+    <div class="agent__header__info">{{ agent.fields.Name }}</div>
+    <div class="agent__header__info"></div>
+    <div class="agent__header__info">{{ agent.fields.id }}</div>
   </div>
   <div class="agent__image">
-    <img src="{{ agent.characterIcon }}" alt="" srcset="" />
+    <img src="{{ agent.fields.Photo.url }}" alt="" srcset="" />
   </div>
   <div class="agent__info">
     <div class="agent__info__role">
@@ -14,14 +14,14 @@
     </div>
     <div class="agent__info__bio">
       // BIO -
-      {{ agent.bio.bio }}
+      {{ agent.fields.Bio }}
     </div>
     <div class="agent__info__abilities">
       // ABILITIES
       <mat-tab-group [backgroundColor]="background">
         <mat-tab
-          *ngFor="let ability of agent.abilities"
-          label=" {{ ability.name }} [{{ ability.keyPress }}] "
+          *ngFor="let ability of agent.fields.Abilities"
+          label=" {{ ability.fields.Name }} [{{ ability.fields.id }}] "
         >
           {{ ability.description }}
         </mat-tab>
