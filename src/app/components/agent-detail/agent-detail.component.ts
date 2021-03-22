@@ -40,7 +40,6 @@ export class AgentDetailComponent implements OnInit {
             (record) => record.fields.Name === agentName
           );
           console.log(this.agent);
-          console.log(this.agent.fields.Abilities);
         })
       )
       .subscribe();
