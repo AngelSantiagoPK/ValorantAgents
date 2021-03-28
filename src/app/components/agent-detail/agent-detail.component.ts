@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import { ActivatedRoute } from '@angular/router';
 import { tap } from 'rxjs/operators';
-import { Agent } from '../../../models';
-import { AgentsService } from '../../agents.service';
 import { AgentsDataService } from '../../services/agents.data.service';
 
 @Component({
@@ -12,29 +10,25 @@ import { AgentsDataService } from '../../services/agents.data.service';
   styleUrls: ['./agent-detail.component.scss'],
 })
 export class AgentDetailComponent implements OnInit {
-  agent: Agent;
+  agent: any;
   background: ThemePalette = 'warn';
 
   constructor(
-    private agentsService: AgentsService,
     private route: ActivatedRoute,
     private agentsDataService: AgentsDataService
   ) {}
 
   ngOnInit(): void {
-    this.agent = this.agentsService.getSelectedAgent();
-    this.route.params
-      .pipe(
-        tap((params) => {
-          this.agentsService.selectAgentByName(params.agentName);
-          this.agent = this.agentsService.getSelectedAgent();
-        })
-      )
-      .subscribe();
-
     this.agentsDataService
       .get()
-      .pipe(tap((records) => console.log(records)))
+      .pipe(
+        tap((records) => {
+          const agentName = this.route.snapshot.params.agentName;
+          this.agent = records.find(
+            (record) => record.fields.Name === agentName
+          );
+        })
+      )
       .subscribe();
   }
 }
