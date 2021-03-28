@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
@@ -41,6 +42,7 @@ import { ValorantTheaterPage } from './pages/valorant-theater/valorant-theater.p
     YouTubePlayerModule,
     MatSelectModule,
     MatTabsModule,
+    HttpClientModule,
   ],
   providers: [AgentsService],
   bootstrap: [AppComponent],

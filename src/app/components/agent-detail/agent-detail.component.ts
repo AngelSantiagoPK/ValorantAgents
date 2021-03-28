@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { tap } from 'rxjs/operators';
 import { Agent } from '../../../models';
 import { AgentsService } from '../../agents.service';
+import { AgentsDataService } from '../../services/agents.data.service';
 
 @Component({
   selector: 'app-agent-detail',
@@ -16,7 +17,8 @@ export class AgentDetailComponent implements OnInit {
 
   constructor(
     private agentsService: AgentsService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private agentsDataService: AgentsDataService
   ) {}
 
   ngOnInit(): void {
@@ -28,6 +30,11 @@ export class AgentDetailComponent implements OnInit {
           this.agent = this.agentsService.getSelectedAgent();
         })
       )
+      .subscribe();
+
+    this.agentsDataService
+      .get()
+      .pipe(tap((records) => console.log(records)))
       .subscribe();
   }
 }
