@@ -29,7 +29,7 @@ export class AgentsDataService {
          * 1. get all agents
          */
         .get(
-          'https://api.airtable.com/v0/appXOr8BTWFINNzZL/Agents?maxRecords=3&view=Grid%20view',
+          'https://api.airtable.com/v0/appXOr8BTWFINNzZL/Agents?maxRecords=15&view=Grid%20view',
           { headers }
         )
         .pipe(

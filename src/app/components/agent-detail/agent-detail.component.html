@@ -1,31 +1,31 @@
 <div class="agent">
   <div class="agent__header">
-    <div class="agent__header__info">{{ agent.fields.Name }}</div>
+    <div class="agent__header__info">{{ agent?.fields.Name }}</div>
     <div class="agent__header__info">
       {{ agent?.fields["Role (from Role)"][0] }}
     </div>
-    <div class="agent__header__info">{{ agent.fields.id }}</div>
+    <div class="agent__header__info">{{ agent?.fields.id }}</div>
   </div>
   <div class="agent__image">
     <img
-      src="{{ agent.fields.Photo[0].thumbnails.large.url }}"
+      src="{{ agent?.fields.Photo[0].thumbnails.large.url }}"
       alt=""
       srcset=""
     />
   </div>
   <div class="agent__info">
     <div class="agent__info__role">
-      // ROLE - {{ agent.fields["Role (from Role)"][0] }} <br />
+      // ROLE - {{ agent?.fields["Role (from Role)"][0] }} <br />
     </div>
     <div class="agent__info__bio">
       // BIO -
-      {{ agent.fields.Bio }}
+      {{ agent?.fields.Bio }}
     </div>
     <div class="agent__info__abilities">
       // ABILITIES
       <mat-tab-group [backgroundColor]="background">
         <mat-tab
-          *ngFor="let ability of agent.fields.Abilities"
+          *ngFor="let ability of agent?.fields.Abilities"
           label=" {{ ability.fields.Name }}"
         >
           {{ ability.fields.Description }}
