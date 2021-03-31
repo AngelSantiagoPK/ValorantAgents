@@ -10,8 +10,8 @@ import { AgentsDataService } from '../../services/agents.data.service';
   styleUrls: ['./agent-detail.component.scss'],
 })
 export class AgentDetailComponent implements OnInit {
-  agent: any;
-  background: ThemePalette = 'warn';
+  agent: Agent;
+  background: ThemePalette = 'primary';
 
   constructor(
     private route: ActivatedRoute,

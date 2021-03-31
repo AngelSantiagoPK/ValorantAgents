@@ -1,0 +1,21 @@
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+$valorant-app-primary: mat-palette($mat-teal);
+$valorant-app-accent: mat-palette($mat-green, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$valorant-app-warn: mat-palette($mat-red);
+
+$valorant-app-theme: mat-light-theme(
+  (
+    color: (
+      primary: $valorant-app-primary,
+      accent: $valorant-app-accent,
+      warn: $valorant-app-warn,
+    ),
+  )
+);
+
+@include angular-material-theme($valorant-app-theme);
