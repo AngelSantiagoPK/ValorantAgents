@@ -1,0 +1,9 @@
+<mat-select class="select" placeholder="Choose an Agent">
+  <mat-option
+    class="select__option"
+    *ngFor="let agent of agents"
+    value="agent.fields.id"
+  >
+    {{ agent.fields.Name }}
+  </mat-option>
+</mat-select>

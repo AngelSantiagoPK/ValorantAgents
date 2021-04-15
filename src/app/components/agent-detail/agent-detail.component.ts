@@ -3,14 +3,13 @@ import { ThemePalette } from '@angular/material/core';
 import { ActivatedRoute } from '@angular/router';
 import { tap } from 'rxjs/operators';
 import { AgentsDataService } from '../../services/agents.data.service';
-
 @Component({
   selector: 'app-agent-detail',
   templateUrl: './agent-detail.component.html',
   styleUrls: ['./agent-detail.component.scss'],
 })
 export class AgentDetailComponent implements OnInit {
-  agent: Agent;
+  agent: any;
   background: ThemePalette = 'primary';
 
   constructor(
