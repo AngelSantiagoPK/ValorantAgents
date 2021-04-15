@@ -1,0 +1,11 @@
+@import "utils";
+
+.select {
+  background: white;
+  width: 300px;
+  margin: $space-s;
+  padding: $space-s;
+  .option {
+    padding: $space-s;
+  }
+}
