@@ -1,9 +1,15 @@
-<mat-select class="select" placeholder="Choose an Agent">
+<mat-select
+  class="select"
+  placeholder="Choose an Agent"
+  [(ngModel)]="selectedAgent"
+>
   <mat-option
     class="select__option"
     *ngFor="let agent of agents"
-    value="agent.fields.id"
+    [value]="agent"
   >
     {{ agent.fields.Name }}
   </mat-option>
 </mat-select>
+<p>{{ selectedAgent?.fields.Name | json }}</p>
+<img [src]="selectedAgent?.fields.Photo[0].url" class="agent__image" />
