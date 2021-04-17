@@ -1,11 +1,28 @@
 @import "utils";
 
-.select {
-  background: white;
-  width: 300px;
+.agent {
+  width: 200px;
   margin: $space-s;
   padding: $space-s;
-  .option {
+  display: flex;
+  flex-direction: column;
+  border-radius: $radius-m;
+  background: $red;
+
+  &__image {
+    margin: auto auto;
+    max-width: 150px;
+    width: 100%;
     padding: $space-s;
+  }
+
+  &__select {
+    background: white;
+    margin: $space-s auto;
+    padding: $space-s;
+
+    &__option {
+      padding: $space-s;
+    }
   }
 }

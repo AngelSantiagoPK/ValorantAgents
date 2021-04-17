@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -49,6 +50,7 @@ import { ValorantTheaterPage } from './pages/valorant-theater/valorant-theater.p
     MatTabsModule,
     HttpClientModule,
     MatExpansionModule,
+    MatButtonModule,
   ],
   providers: [AgentsService],
   bootstrap: [AppComponent],

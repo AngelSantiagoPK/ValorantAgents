@@ -1,9 +1,27 @@
-<mat-select class="select" placeholder="Choose an Agent">
-  <mat-option
-    class="select__option"
-    *ngFor="let agent of agents"
-    value="agent.fields.id"
+<div class="agent">
+  <img
+    *ngIf="selectedAgent"
+    [src]="selectedAgent?.fields.Photo[0].thumbnails.large.url"
+    class="agent__image"
+  />
+  <mat-select
+    class="agent__select"
+    placeholder="Choose an Agent"
+    [(ngModel)]="selectedAgent"
+    [disabled]="locked"
   >
-    {{ agent.fields.Name }}
-  </mat-option>
-</mat-select>
+    <mat-option
+      class="agent__select__option"
+      *ngFor="let agent of agents"
+      [value]="agent"
+    >
+      {{ agent.fields.Name }}
+    </mat-option>
+  </mat-select>
+  <button
+    mat-raised-button
+    [color]="locked ? 'primary' : 'accent'"
+    (click)="onLockInClick()"
+    [innerHTML]="locked ? 'READY' : 'Lock In'"
+  ></button>
+</div>

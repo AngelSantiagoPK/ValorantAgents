@@ -3,7 +3,7 @@
 @include mat-core();
 
 $valorant-app-primary: mat-palette($mat-teal);
-$valorant-app-accent: mat-palette($mat-green, A200, A100, A400);
+$valorant-app-accent: mat-palette($mat-grey, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $valorant-app-warn: mat-palette($mat-red);
