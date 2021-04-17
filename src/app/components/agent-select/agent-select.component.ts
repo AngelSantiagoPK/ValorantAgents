@@ -11,6 +11,8 @@ export class AgentSelectComponent implements OnInit {
   @Input()
   agents: any;
 
+  locked = false;
+
   selectedAgent: any;
 
   constructor(private agentsDataService: AgentsDataService) {}
@@ -25,5 +27,9 @@ export class AgentSelectComponent implements OnInit {
         })
       )
       .subscribe();
+  }
+
+  onLockInClick() {
+    this.locked = !this.locked;
   }
 }
